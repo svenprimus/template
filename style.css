@@ -1,11 +1,28 @@
 header {
-
 }
 
 main {
-
 }
 
 footer {
-    
 }
+
+header,
+footer,
+main {
+    padding: 0 clamp(30px, calc((100vw - 400px) * 105 / 840 + 30px), 135px);
+}
+
+/* #region media queries */
+@media screen and (min-width: 1441px) {
+    header,
+    footer {
+        /* padding up to 1440p */
+        padding-inline: max(calc(50% - 720px), 135px);
+    }
+    main {
+        /* padding up to 1170p content */
+        padding-inline: max(calc(50% - (720px - 135px)), 135px);
+    }
+}
+/* #endregion media queries */
